@@ -1,0 +1,42 @@
+1. Get all templates
+params
+ - Receiver Type (Internal/External/Both)
+ - Entity ID (numeric)
+- Product ID - TOI/TOE/...
+return
+ - List of Templates
+	{template ID, template Name, template Assigned to,
+	template access controls (view, delete, edit, disable),
+	tagList}
+
+2. Get Specific Template
+params
+ - Template ID
+ - Entity ID (numeric)
+ - Product ID - TOI/TOE/...
+return
+ - json formate Template content {template ID, template content in HTML}
+
+3. Send Mail
+params
+ - Entity ID (numeric)
+ - Product ID - TOI/TOE/...
+ - Template ID, Template Content with replaced placeholders, Email Header details, Attachment temp url
+return
+ - json format Status, Conversation ID, Messgage ID
+
+4. Get All Sent Mails
+params
+ - Entity ID (numeric)
+ - Product ID - TOI/TOE/...
+ - filter json (customer, internal/external...)
+return
+ - List of Emails {Conversation ID, Message ID, Subject, To, CC, BCC, Content, Attachment url)
+
+
+
+
+Edit Template
+params
+ - Template ID
+ - 
